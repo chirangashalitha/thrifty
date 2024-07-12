@@ -1,10 +1,10 @@
-import ItemCard from "./components/ItemCard";
+import ItemSlider from "./components/ItemSlider/ItemSlider";
 
 function App() {
 
   return (
     <div>
-      <ItemCard/>
+      <ItemSlider/>
     </div>
   );
 }

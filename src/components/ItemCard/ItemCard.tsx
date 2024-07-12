@@ -1,9 +1,15 @@
 import { useState } from "react";
-import AddToCartButton from "./AddToCartButton";
-import Alert from "./Alert";
-import itemhoodie from "../assets/images/itemhoodie.jpg";
+import AddToCartButton from "../AddToCartButton";
+import Alert from "../Alert";
+import './ItemCard.css';
 
-function ItemCard() {
+interface Props {
+  title: string;
+  price?: string;
+  src: string;
+}
+
+function ItemCard({ title, price, src }: Props) {
   const [alertVisible, setAlertVisibility] = useState(false);
 
   return (
@@ -16,10 +22,10 @@ function ItemCard() {
         )}
       </div>
       <div className="card" style={{ width: "18rem" }}>
-        <img src={itemhoodie} className="card-img-top" alt="..." />
+        <img src={src} className="card-img-top item-img" alt="..." />
         <div className="card-body">
-          <h5 className="card-title">Black Comfy Hoodie</h5>
-          <p className="card-text">LKR 2900</p>
+          <h5 className="card-title">{title}</h5>
+          <p className="card-text">{price}</p>
           <AddToCartButton onClick={() => setAlertVisibility(true)}>
             Add to Cart
           </AddToCartButton>
