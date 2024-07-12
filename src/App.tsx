@@ -1,10 +1,11 @@
 import ItemSlider from "./components/ItemSlider/ItemSlider";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
-
   return (
     <div>
-      <ItemSlider/>
+      <Navbar />
+      <ItemSlider />
     </div>
   );
 }

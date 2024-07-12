@@ -1,5 +1,5 @@
 import { useState } from "react";
-import AddToCartButton from "../AddToCartButton";
+import AddToCartButton from "./AddToCartButton";
 import Alert from "../Alert";
 import './ItemCard.css';
 
